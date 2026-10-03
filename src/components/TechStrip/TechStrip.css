@@ -1,0 +1,75 @@
+.tech-strip {
+    width: 100%;
+    overflow: hidden;
+    padding: 22px 0;
+    border-top: 1px solid rgba(124, 58, 237, 0.15);
+    border-bottom: 1px solid rgba(124, 58, 237, 0.15);
+    background: linear-gradient(90deg, #f4efff, #ffffff, #f4efff);
+}
+
+.tech-track {
+    display: flex;
+    width: max-content;
+    animation: tech-scroll 28s linear infinite;
+}
+
+.tech-group {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 54px;
+    padding-right: 54px;
+}
+
+.tech-group span {
+    position: relative;
+    color: var(--text-dark);
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0.92;
+}
+
+.tech-group span::after {
+    content: "•";
+    position: absolute;
+    right: -31px;
+    color: var(--primary-color);
+}
+
+.tech-strip:hover .tech-track {
+    animation-play-state: paused;
+}
+
+@keyframes tech-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 650px) {
+    .tech-strip {
+        padding: 17px 0;
+    }
+
+    .tech-track {
+        animation-duration: 21s;
+    }
+
+    .tech-group {
+        gap: 40px;
+        padding-right: 40px;
+    }
+
+    .tech-group span {
+        font-size: 16px;
+    }
+
+    .tech-group span::after {
+        right: -24px;
+    }
+}

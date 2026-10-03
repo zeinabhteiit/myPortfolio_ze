@@ -1,0 +1,31 @@
+import "./App.css";
+
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
+import About from "./components/About/About";
+import Resume from "./components/Resume/Resume";
+import TechStrip from "./components/TechStrip/TechStrip";
+import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
+
+function App() {
+  return (
+    <div className="portfolio">
+      <Navbar />
+
+      <main>
+        <Hero />
+        <About />
+        <Resume />
+        <TechStrip />
+        <Projects />
+        <Contact />
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
